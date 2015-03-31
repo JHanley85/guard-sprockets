@@ -59,7 +59,7 @@ alias_method :run_on_modifications, :run_on_changes
       path = Pathname.new(path)
 
       output_filename = without_preprocessor_extension(path.basename.to_s)
-      output_path = Pathname.new(File.join(@destination, output_filename+".js"))
+      output_path = Pathname.new(File.join(@destination, output_filename))
 
       UI.info "Sprockets will compile #{output_filename}"
 
