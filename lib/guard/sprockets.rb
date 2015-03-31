@@ -52,7 +52,7 @@ module Guard
       end
       success
     end
-alias_method :run_on_modifications :run_on_changes
+alias_method :run_on_modifications, :run_on_changes
     private
 
     def sprocketize(path)
