@@ -5,7 +5,7 @@ require 'sprockets'
 require 'execjs'
 
 module Guard
-  class Sprockets < Guard
+  class Sprockets < Plugin
 
     attr_reader :asset_paths, :destination, :root_file, :sprockets
 
