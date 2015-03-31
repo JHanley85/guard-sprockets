@@ -59,7 +59,7 @@ alias_method :run_on_modifications, :run_on_changes
       path = Pathname.new(path)
 
       output_filename = without_preprocessor_extension(path.basename.to_s)
-      output_path = Pathname.new(File.join(@destination, output_filename))
+      output_path = Pathname.new(File.join(@destination, output_filename+".js"))
 
       UI.info "Sprockets will compile #{output_filename}"
 
@@ -79,7 +79,7 @@ alias_method :run_on_modifications, :run_on_changes
     end
 
     def without_preprocessor_extension(filename)
-      filename.gsub(/^(.*\.(?:js|css))\.[^.]+(\.erb)?$/, '\1')
+      filename.gsub(/^(.*\.(?:js|css|coffee))\.[^.]+(\.erb)?$/, '\1')
     end
   end
 end
