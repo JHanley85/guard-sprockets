@@ -1,5 +1,3 @@
-require 'guard'
-require 'guard/guard'
 require 'guard/compat/plugin'
 require 'sprockets'
 require 'execjs'
