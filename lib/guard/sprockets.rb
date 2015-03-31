@@ -7,8 +7,8 @@ module Guard
 
     attr_reader :asset_paths, :destination, :root_file, :sprockets
 
-    def initialize(watchers = [], options = {})
-      super(watchers, options)
+    def initialize(options = {})
+      super
 
       @options     = options
       @asset_paths = Array(@options[:asset_paths] || 'app/assets/javascripts')
